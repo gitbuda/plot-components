@@ -56,7 +56,7 @@ class LinearMultiline(object):
 
     def show_or_save(self, output_path=None, *args, **kw):
         '''
-        Save figure to a file.
+        Show or save figure to a file.
         '''
         if output_path is None:
             plt.show()
