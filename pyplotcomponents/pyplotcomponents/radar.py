@@ -48,8 +48,6 @@ def draw(output_path=None):
     Plot a radar from the plot object.
 
     Args:
-        plot:        instance of the Plot class
-
         output_path: path to output file, if the output_path is
                      None than graph will be shown inside a window
     '''
@@ -92,4 +90,4 @@ def draw(output_path=None):
 
 
 if __name__ == "__main__":
-    draw(output_path="output.png")
+    draw()
