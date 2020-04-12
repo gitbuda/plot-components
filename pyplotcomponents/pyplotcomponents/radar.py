@@ -18,7 +18,7 @@ class Radar(object):
             rect = [0.1, 0.1, 0.8, 0.8]
 
         self.n = len(titles)
-        self.angles = np.arange(90, 90+360, 360.0/self.n) % 360
+        self.angles = np.arange(90, 90 + 360, 360.0 / self.n) % 360
         self.axes = [fig.add_axes(rect, projection="polar",
                                   label="axes%d" % i)
                      for i in range(self.n)]
@@ -40,7 +40,11 @@ class Radar(object):
         angle = np.deg2rad(np.r_[self.angles, self.angles[0]])
         values = np.r_[values, values[0]]
         self.ax.plot(angle, values, *args, **kw)
-        self.ax.fill(angle, values, facecolor=kw['color'], alpha=kw['alpha']/3)
+        self.ax.fill(
+            angle,
+            values,
+            facecolor=kw['color'],
+            alpha=kw['alpha'] / 3)
 
 
 def draw(output_path=None):
