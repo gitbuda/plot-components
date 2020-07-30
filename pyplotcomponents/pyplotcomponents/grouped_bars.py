@@ -57,11 +57,11 @@ class GroupedBars(object):
                 textcoords="offset points",
                 ha='center', va='bottom')
 
-    def add_legend(self):
+    def add_legend(self, *args, **kw):
         '''
         Add legend. Has to be called after all lines were added.
         '''
-        self.axis.legend(loc='upper right')
+        self.axis.legend(*args, **kw)
 
     def show_or_save(self, output_path=None, *args, **kw):
         '''
@@ -94,7 +94,7 @@ def draw(output_path=None):
     grouped_bars.add_data([15, 13, 50, 2, 34], label='4')
     grouped_bars.add_data([15, 13, 50, 2, 34], label='5')
     grouped_bars.add_data([15, 13, 50, 2, 34], label='6')
-    grouped_bars.add_legend()
+    grouped_bars.add_legend(loc='upper left')
     grouped_bars.show_or_save(output_path)
 
 
