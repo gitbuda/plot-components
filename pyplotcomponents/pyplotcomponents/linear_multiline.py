@@ -48,11 +48,11 @@ class LinearMultiline(object):
         '''
         self.axis.plot(xvalues, yvalues, *args, **kw)
 
-    def add_legend(self):
+    def add_legend(self, *args, **kw):
         '''
         Add legend. Has to be called after all lines were added.
         '''
-        self.axis.legend(loc='upper right')
+        self.axis.legend(*args, **kw)
 
     def show_or_save(self, output_path=None, *args, **kw):
         '''
