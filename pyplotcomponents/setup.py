@@ -7,5 +7,5 @@ setup(
     author='Marko Budiselic',
     author_email='mbudiselicbuda@gmail.com',
     packages=['pyplotcomponents'],
-    install_requires=['matplotlib==3.1.2']
+    install_requires=['matplotlib==3.9.1']
 )
